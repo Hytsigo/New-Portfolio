@@ -70,20 +70,37 @@ export const projectsData = [
         url: "https://quchara.com/",
     },
     {
-        title: "Nails & Beauty",
+        title: "Saas Dashboard",
         description:
-            "I worked as a front-end developer on a website that helped streamline the service and scheduling system, specifically for managing nail appointments.",
-        tags: ["Next.js", "fastify", "mongosb", "TypeScript", "Tailwind"],
+            "Multi-tenant saaS dashboard with secure auth, RBAC, and leads management with CSV import/export",
+        tags: [
+            "Next.js",
+            "Supabase",
+            "PostgreSQL",
+            "TypeScript",
+            "Tailwind",
+            "shadcn/ui",
+            "TanStack Query",
+            "Zod",
+        ],
         imageUrl: rmtdevImg,
         url: "https://app-nails.vercel.app/auth/login",
     },
     {
-        title: "Marvel's App",
+        title: "Mini ATS",
         description:
-            "This was a personal project to practice my API calls, responsive design, and state management with filtering.",
-        tags: ["React", "Next.js", "Css", "Tailwind", "Typescript"],
+            "I built a multi-tenant ATS with a drag-and-drop hiring pipeline, candidate profiles, CV uploads, and secure role-based access eith Supabase RLS",
+        tags: [
+            "Next.js",
+            "Supabase",
+            "Tailwind",
+            "Typescript",
+            "TanStack Query",
+            "Zod",
+            "shadcn/ui",
+        ],
         imageUrl: wordanalyticsImg,
-        url: "https://marvel-app-next-heljytdlz-hytsigos-projects.vercel.app/",
+        url: "https://ats-dashboard-six.vercel.app/",
     },
 ] as const;
 
