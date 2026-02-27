@@ -90,7 +90,7 @@ export const projectsData = [
             "Zod",
         ],
         imageUrl: rmtdevImg,
-        url: "https://app-nails.vercel.app/auth/login",
+        url: "https://saas-dashboard-swart.vercel.app/",
     },
     {
         title: "Mini ATS",
