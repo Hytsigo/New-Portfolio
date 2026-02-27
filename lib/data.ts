@@ -62,12 +62,18 @@ export const experiencesData = [
 
 export const projectsData = [
     {
-        title: "Quchara App",
+        title: "StriveFit App",
         description:
-            "I worked as a front-end developer on the mobile application **Quchara**, which was created to make lunchtime easier for everyone.",
-        tags: ["React-native", "typescript", "Tailwind", "Prisma"],
+            "Built StriveFit, a cross-platform fitness app with Firebase login, workout tracking, and progress stats.",
+        tags: [
+            "React-native",
+            "typescript",
+            "Expo Router",
+            "Zustand",
+            "Firebase",
+        ],
         imageUrl: corpcommentImg,
-        url: "https://quchara.com/",
+        url: "https://youtube.com/shorts/OFq6n_I56rw",
     },
     {
         title: "Saas Dashboard",
