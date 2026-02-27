@@ -2,7 +2,7 @@
 
 import Image from "next/image";
 import React from "react";
-import { motion } from "framer-motion";
+import { motion, useReducedMotion } from "framer-motion";
 import Link from "next/link";
 import { BsArrowRight, BsLinkedin } from "react-icons/bs";
 import { HiDownload } from "react-icons/hi";
@@ -11,6 +11,7 @@ import { useSectionInView } from "@/lib/hooks";
 import { useActiveSectionContext } from "@/context/active-section-context";
 
 export default function Intro() {
+    const shouldReduceMotion = useReducedMotion();
     const { ref } = useSectionInView("Home", 0.5);
     const { setActiveSection, setTimeOfLastClick } = useActiveSectionContext();
 
@@ -23,19 +24,22 @@ export default function Intro() {
             <div className="flex items-center justify-center">
                 <div className="relative">
                     <motion.div
-                        initial={{ opacity: 0, scale: 0 }}
+                        initial={
+                            shouldReduceMotion ? false : { opacity: 0, scale: 0 }
+                        }
                         animate={{ opacity: 1, scale: 1 }}
                         transition={{
                             type: "tween",
-                            duration: 0.2,
+                            duration: shouldReduceMotion ? 0 : 0.2,
                         }}
                     >
                         <Image
                             src="https://lh3.googleusercontent.com/a/ACg8ocIAvy0B3CkcgchBSZai9-qkuXcHILX4ohutigYof9FcRjuS2GgNXg=s288-c-no"
                             alt="Cleiver portrait"
-                            width="192"
-                            height="192"
-                            quality="95"
+                            width="96"
+                            height="96"
+                            quality="75"
+                            sizes="96px"
                             priority={true}
                             className="h-24 w-24 rounded-full object-cover border-[0.35rem] border-white shadow-xl"
                         />
@@ -43,13 +47,15 @@ export default function Intro() {
 
                     <motion.span
                         className="absolute bottom-0 right-0 text-4xl"
-                        initial={{ opacity: 0, scale: 0 }}
+                        initial={
+                            shouldReduceMotion ? false : { opacity: 0, scale: 0 }
+                        }
                         animate={{ opacity: 1, scale: 1 }}
                         transition={{
                             type: "spring",
                             stiffness: 125,
                             delay: 0.1,
-                            duration: 0.7,
+                            duration: shouldReduceMotion ? 0 : 0.7,
                         }}
                     >
                         👋
@@ -59,7 +65,7 @@ export default function Intro() {
 
             <motion.h1
                 className="mb-10 mt-4 px-4 text-2xl font-medium !leading-[1.5] sm:text-4xl"
-                initial={{ opacity: 0, y: 100 }}
+                initial={shouldReduceMotion ? false : { opacity: 0, y: 60 }}
                 animate={{ opacity: 1, y: 0 }}
             >
                 <span className="font-bold">Hello, I'm Cleiver.</span> I'm a{" "}
@@ -71,7 +77,7 @@ export default function Intro() {
 
             <motion.div
                 className="flex flex-col sm:flex-row items-center justify-center gap-2 px-4 text-lg font-medium"
-                initial={{ opacity: 0, y: 100 }}
+                initial={shouldReduceMotion ? false : { opacity: 0, y: 60 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{
                     delay: 0.1,
