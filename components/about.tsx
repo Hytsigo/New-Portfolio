@@ -19,22 +19,19 @@ export default function About() {
         >
             <SectionHeading>About me</SectionHeading>
             <p className="mb-3">
-                I`m Cleiver. I`m a Frontend Developer with 2 years of
-                experience, specializing in creating interactive and
-                user-centered solutions. I have worked on several significant
-                projects, always committed to writing clean and efficient code.
-                Outside of the programming world, I am passionate about sports
-                and physical training. I also enjoy a good coffee. I am always
-                looking for opportunities to learn and improve my skills.
+                I build working products, from requirements and interfaces to
+                the integrations that make them useful. Frontend development is
+                my strongest area, with React and Next.js for web and React
+                Native for mobile. My independent work includes a healthcare
+                CRM, a WhatsApp follow-up platform and mobile apps for habits
+                and fitness.
             </p>
 
             <p>
-                <span className="italic">When I'm not coding</span>, I enjoy
-                playing video games, watching movies, and trainning. I also
-                enjoy <span className="font-medium">learning new things</span>.
-                I am currently learning about{" "}
-                <span className="font-medium">history and philosophy</span>. I'm
-                also learning how to play the guitar.
+                I work with APIs, databases and deployment when a product needs
+                them, and use AI-assisted tools as part of my development
+                workflow. <span className="italic">Outside of work</span>, I
+                enjoy training, coffee, video games and learning guitar.
             </p>
         </motion.section>
     );
